@@ -39,13 +39,13 @@ public class MatsimModelImplementation extends MATSimApplication {
 	public static void main(String[] args) {
 		MATSimApplication.runWithDefaults(MatsimModelImplementation.class, args);
 	}
-
+// more support for command line interface
 	@Override
 	protected Config prepareConfig(Config config) {
 
 		config.controller().setOverwriteFileSetting( OverwriteFileSetting.deleteDirectoryIfExists );
 
-		// possibly modify config here
+		config.controller().setLastIteration(0);
 
 		// ---
 
